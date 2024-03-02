@@ -1,0 +1,10 @@
+import './assets/main.css'
+import 'bootstrap/dist/css/bootstrap.css';
+
+import { createApp } from 'vue'
+import Landing from './Landing.vue'
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.mount('#app')
