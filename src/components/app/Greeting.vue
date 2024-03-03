@@ -1,11 +1,24 @@
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+    <div class="page-content-height d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4"><h1 class="green">{{ msg }}</h1></div>
+          <div class="col-12 col-md-8">
+            <h3>
+              My name is Steve Daniels. Currently I'm a front-end web developer. My main interests are web programming, artificial intelligence, and data science.
+            </h3>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div v-for="(item,index) in infos" :key="'info-'+index" class="col-6 col-md-3 text-center">
+            <button-list-info v-bind="item"></button-list-info>
+          </div>
+        </div>
+      </div>
+      
+     
+    </div>
   </div>
 </template>
 
@@ -13,13 +26,21 @@
 export default {
   data(){
     return {
-      msg: "Greetings! Good to see ya!"
+      msg: "Hello!",
+      isHover: false,
+      infos: [
+        {itemLabel: "Education", itemIcon: "graduation-cap"},
+        {itemLabel: "Licenses and Certifications", itemIcon: "certificate"},
+        {itemLabel: "Work Experience", itemIcon: "laptop-file"},
+        {itemLabel: "Projects", itemIcon: "list-check"},
+      ]
     }
   }
 }
 </script>
 
 <style scoped>
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
