@@ -1,6 +1,6 @@
 <template>
   <page-section-wrapper sectionTitle="Licenses and Certifications" class="cert-bg">
-    <div class="section-content d-flex align-items-center pt-5">
+    <div id="grt-sct-certificate" class="section-content d-flex align-items-center pt-5">
       <div class="container-fluid">
         <div class="row">
           <div v-for="(item,index) in certificates" :key="'cert'+index" class="col-12 col-md-6 pb-3">
@@ -50,6 +50,20 @@ export default {
   props: {
   },
   methods: {
+  },
+  mounted: function(){
+    const observer = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add('ease-enter-animated');
+        }
+      });
+    });
+
+    observer.observe(document.querySelector('#grt-sct-certificate'));
   }
 }
 </script>

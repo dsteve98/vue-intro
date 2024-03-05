@@ -22,3 +22,27 @@ a,
     padding-right: 6rem;
   }
 }
+
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+@keyframes ease-enter {
+	0% {
+		opacity: 0%;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wipe-enter-animated {
+    animation: wipe-enter 1s 1;
+  }
+  .ease-enter-animated {
+    animation: ease-enter 1s 1;
+  }
+}
