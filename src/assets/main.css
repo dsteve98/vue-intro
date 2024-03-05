@@ -4,9 +4,21 @@ a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
 .page-content-height {
   min-height: 100vh;
+}
+
+.content-padding {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+
+@media (min-width: 1200px) {
+  .content-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
