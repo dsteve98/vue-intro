@@ -14,6 +14,7 @@ import router from './router'
 import ButtonListInfoComponent from './components/subapp/greeting/ButtonListInfoComponent.vue'
 import PageSectionWrapper from './components/subapp/greeting/PageSectionWrapper.vue'
 import EducationSectionComponent from './components/subapp/greeting/EducationSectionComponent.vue'
+import CertificationComponent from './components/subapp/greeting/CertificationComponent.vue'
 
 const app = createApp(App)
 app.use(router)
@@ -22,5 +23,6 @@ app.component('font-awesome-icon', FontAwesomeIcon);
 app.component('button-list-info', ButtonListInfoComponent);
 app.component('page-section-wrapper', PageSectionWrapper);
 app.component('education-section', EducationSectionComponent);
+app.component('certification-section', CertificationComponent);
 
 app.mount('#app')

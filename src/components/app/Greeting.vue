@@ -18,6 +18,7 @@
       </div>
     </div>
     <education-section />
+    <certification-section />
   </div>
 </template>
 
