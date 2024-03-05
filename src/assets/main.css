@@ -15,6 +15,12 @@ a,
   padding-right: 3rem;
 }
 
+.grt-sct-certificate{
+  opacity: 0;
+}
+.grt-sct-certificate-transition{
+  opacity: 1;
+}
 
 @media (min-width: 1200px) {
   .content-padding {
@@ -42,7 +48,8 @@ a,
   .wipe-enter-animated {
     animation: wipe-enter 1s 1;
   }
-  .ease-enter-animated {
-    animation: ease-enter 1s 1;
+  .grt-sct-certificate {
+    transition: opacity 1.5s ease;
+    transition-delay: 0.5s;
   }
 }
